@@ -133,6 +133,9 @@ const generateRTEToken = (req, resp) => {
 }
 
 app.options('*', cors());
+app.get('/',(req,res,next)=>{
+  res.send("go aways ☆*: .｡. o(≧▽≦)o .｡.:*☆");
+});
 app.get('/ping', nocache, ping)
 app.get('/rtc/:channel/:role/:tokentype/:uid', nocache, generateRTCToken);
 app.get('/rtm/:uid/', nocache, generateRTMToken);
